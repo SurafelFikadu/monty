@@ -24,8 +24,8 @@ extern char **op_toks;
 typedef struct stack_s
 {
 	int n;
-	struct stacks *prev;
-	struct stacks *next;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -34,7 +34,7 @@ typedef struct stack_s
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO, Holbrton project
+ * for stack, queues, LIFO, FIFO, Holberton project
  */
 typedef struct instruction_s
 {
@@ -65,12 +65,12 @@ void monty_mul(stack_t **stack, unsigned int line_number);
 void monty_mod(stack_t **stack, unsigned int line_number);
 void monty_pchar(stack_t **stack, unsigned int line_number);
 void monty_pstr(stack_t **stack, unsigned int line_number);
-void monty_rtol(stack_t **stack, unsigned int line_number);
-void monty_rtor(stack_t **stack, unsigned int line_number);
+void monty_rotl(stack_t **stack, unsigned int line_number);
+void monty_rotr(stack_t **stack, unsigned int line_number);
 void monty_stack(stack_t **stack, unsigned int line_number);
 void monty_queue(stack_t **stack, unsigned int line_number);
 
-/* CUSTOM STANDING LIBRARY FUNCTIONS */
+/* CUSTOM STANDARD LIBRARY FUNCTIONS */
 char **strtow(char *str, char *delims);
 char *get_int(int n);
 
@@ -79,7 +79,7 @@ int usage_error(void);
 int malloc_error(void);
 int f_open_error(char *filename);
 int unknown_op_error(char *opcode, unsigned int line_number);
-int no_int_error(char *opcode, unsigned int line_number);
+int no_int_error(unsigned int line_number);
 int pop_error(unsigned int line_number);
 int pint_error(unsigned int line_number);
 int short_stack_error(unsigned int line_number, char *op);
