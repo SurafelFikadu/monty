@@ -30,7 +30,7 @@ int malloc_error(void)
 
 /**
  * f_open_error - Prints file opening error message w/ file name.
- *
+ * rw
  * @filename: Name of file failed to open.
  *
  * Returns: (EXIT_FAILURE) always.
