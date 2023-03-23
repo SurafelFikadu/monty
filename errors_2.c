@@ -56,6 +56,7 @@ int div_error(unsigned int line_number)
 	return (EXIT_FAILURE);
 }
 
+
 /**
  * pchar_error - Prints pchar error message for empty stacks
  *               empty stacks and non-character values.
@@ -64,6 +65,7 @@ int div_error(unsigned int line_number)
  *
  * Return: (EXIT_FAILURE) always.
  */
+
 int pchar_error(unsigned int line_number, char *message)
 {
 	fprintf(stderr, "L%u: can't pchar, %s\n", line_number, message);

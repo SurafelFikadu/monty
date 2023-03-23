@@ -4,7 +4,7 @@ char *get_int(int num);
 unsigned int _abs(int);
 int get_numbase_len(unsigned int num, unsigned int base);
 void fill_numbase_buff(unsigned int num, unsigned int base,
-	char *buff, int buff_size);
+		char *buff, int buff_size);
 
 /**
  * get_int - gets a character pointer to new string containing int
@@ -27,6 +27,12 @@ char *get_int(int num)
 	ret = malloc(length + 1); /* create new string */
 	if (!ret)
 		return (NULL);
+
+	fill_numbase_buff(temp, 10, ret, length);
+	if (num < 0 || num_1 < 0)
+		ret[0] = '-';
+
+	return (ret);
 }
 
 /**

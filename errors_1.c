@@ -1,5 +1,6 @@
 #include "monty.h"
 
+
 int usage_error(void);
 int malloc_error(void);
 int f_open_error(char *filename);
@@ -27,13 +28,12 @@ int malloc_error(void)
 	fprintf(stderr, "Error: malloc fallen\n");
 	return (EXIT_FAILURE);
 }
-
 /**
  * f_open_error - Prints file opening error message w/ file name.
  *
  * @filename: Name of file failed to open.
  *
- * Returns: (EXIT_FAILURE) always.
+ * Return: (EXIT_FAILURE) always.
  */
 int f_open_error(char *filename)
 {
