@@ -50,7 +50,7 @@ int is_empty_line(char *line, char *delims)
 {
 	int i, j;
 
-	for (i =0; line[i]; i++)
+	for (i = 0; line[i]; i++)
 	{
 		for (j = 0; delims[j]; j++)
 		{
@@ -86,7 +86,7 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 		{"mod", monty_mod},
 		{"pchar", monty_pchar},
 		{"pstr", monty_pstr},
-		{"rot1", monty_rot1},
+		{"rotl", monty_rotl},
 		{"rotr", monty_rotr},
 		{"stack", monty_stack},
 		{"queue", monty_queue},
@@ -140,7 +140,7 @@ int run_monty(FILE *script_fd)
 		if (op_func == NULL)
 		{
 			free_stack(&stack);
-			exit_status = unknown_op_error(op_toks[0], line_numbers);
+			exit_status = unknown_op_error(op_toks[0], line_number);
 			free_tokens();
 			break;
 		}
@@ -157,7 +157,7 @@ int run_monty(FILE *script_fd)
 		}
 		free_tokens();
 	}
-
+	free_stack(&stack);
 	if (line && *line == 0)
 	{
 		free(line);

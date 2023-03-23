@@ -7,7 +7,7 @@ int check_mode(stack_t *stack);
 
 /**
  * free_stack - Frees a stack_t stack.
- * @stack: A pointer to the top (stack) or 
+ * @stack: A pointer to the top (stack) or
  *         bottom (queue) of a stack_t.
  */
 void free_stack(stack_t **stack)
@@ -37,7 +37,11 @@ int init_stack(stack_t **stack)
 	s = malloc(sizeof(stack_t));
 	if (s == NULL)
 		return (malloc_error());
-
+	
+	s->n = STACK;
+        s->prev = NULL;
+        s->next = NULL;
+	
 	*stack = s;
 
 	return (EXIT_SUCCESS);

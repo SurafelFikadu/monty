@@ -68,11 +68,11 @@ char **strtow(char *str, char *delims)
  *
  * @delims: Pointers to null terminated array of delimitors
  *
- * Returns: 1 (success) 0 (failure)
+ * Return: 1 (success) 0 (failure)
  */
 int is_delim(char ch, char *delims)
 {
-	int i;
+	int i = 0;
 
 	while (delims[i])
 	{
@@ -87,8 +87,8 @@ int is_delim(char ch, char *delims)
  * get_word_length - gets the word length of cur word in str
  *
  * @str: string to get word lenth from current words
- *
- * Returns: word length of current word
+ * @delims: delimitors to use to delimit words
+ * Return: word length of current word
  */
 int get_word_length(char *str, char *delims)
 {
@@ -156,6 +156,6 @@ char *get_next_word(char *str, char *delims)
 			break;
 		i++;
 	}
-	return (str + 1);
+	return (str + i);
 }
 
