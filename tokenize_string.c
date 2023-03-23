@@ -6,6 +6,7 @@ int get_word_length(char *str, char *delims);
 int get_word_count(char *str, char *delims);
 char *get_next_word(char *str, char *delims);
 
+
 /**
  * strtow - takes a string and seperates its words
  *

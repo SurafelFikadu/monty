@@ -37,6 +37,7 @@ void monty_pchar(stack_t **stack, unsigned int line_number)
 	printf("%c\n", (*stack)->next->n);
 }
 
+
 /**
  * monty_pstr - Prints the string contained in a stack_t linked list.
  * @stack: A pointer to the top mode node of stack_t linked list.

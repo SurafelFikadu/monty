@@ -29,15 +29,12 @@ char *get_int(int num)
 		return (NULL);
 
 	fill_numbase_buff(temp, 10, ret, length);
-	if (num < 0 || num_1 < 0)
+	if (num < 0 || num_l < 0)
 		ret[0] = '-';
 
 	return (ret);
 }
-fill_numbase_buff(temp, 10, ret, length);
-        if (num < 0 || num_l < 0)
-                ret[0] = '-';
-        return (ret);
+
 /**
  * _abs - gets the absolute value of an integer
  * @i: integer to get absolute value of

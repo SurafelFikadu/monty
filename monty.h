@@ -12,6 +12,7 @@
 /* GLOBAL OPCODE TOKENS */
 extern char **op_toks;
 
+
 /**
  * struct stack_s - doubly linked list representaion of stack (or queue)
  * @n: integer

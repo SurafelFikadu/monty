@@ -56,7 +56,6 @@ int div_error(unsigned int line_number)
 	return (EXIT_FAILURE);
 }
 
-
 /**
  * pchar_error - Prints pchar error message for empty stacks
  *               empty stacks and non-character values.
